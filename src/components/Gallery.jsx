@@ -21,8 +21,8 @@ const Gallery = () => {
       {pictures.map(pic => {
         return (
           <div 
-            className="photo"
             key={pic.id}
+            className="photo"
             onClick={() => toggleFav(pic.id)}
             style={{backgroundImage: `url(${pic.src.large})`}}
           >
