@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { PicturesContext } from "../PicturesContext";
+import IconHeart from "./IconHeart";
 
 const Gallery = () => {
   const {pictures, setPictures} = useContext(PicturesContext)
@@ -19,13 +20,15 @@ const Gallery = () => {
     <div className="gallery grid-columns-5 p-3">
       {pictures.map(pic => {
         return (
-          <img 
+          <div 
             className="photo"
-            src={pic.src.medium} 
-            alt="pic.alt" 
             key={pic.id}
             onClick={() => toggleFav(pic.id)}
-          />
+            style={{backgroundImage: `url(${pic.src.large})`}}
+          >
+            <IconHeart filled={pic.liked}/>
+            <p>{pic.alt}</p>
+          </div>
         )
       })}
     </div>
