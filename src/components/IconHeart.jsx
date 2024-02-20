@@ -1,7 +1,7 @@
 const IconHeart = ({ filled }) => {
   return (
     <svg
-      width="40px"
+      width="25px"
       viewBox="0 0 24 24"
     >
       <path
