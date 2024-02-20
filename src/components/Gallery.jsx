@@ -27,7 +27,10 @@ const Gallery = () => {
             style={{backgroundImage: `url(${pic.src.large})`}}
           >
             <IconHeart filled={pic.liked}/>
-            <p>{pic.alt}</p>
+            <div>
+              <p>{pic.alt}</p>
+              <small>{pic.photographer}</small>
+            </div>
           </div>
         )
       })}

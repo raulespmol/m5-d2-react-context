@@ -10,7 +10,6 @@ const PicturesProvider = ({children}) => {
     fetch(PHOTO_URL)
      .then(response => response.json())
      .then(data => setPictures(data.photos))
-    console.log(pictures);
   }
 
   useEffect(() => {
