@@ -6,13 +6,11 @@ const Gallery = () => {
   const {pictures, setPictures} = useContext(PicturesContext)
 
   const toggleFav = (id) => { 
-    const newPictures = pictures.map(picture => {
-      if(picture.id === id){
-        const isLiked = picture.liked
-        return {...picture, liked: !isLiked}
-      }
-      return picture
-    })
+    const newPictures = pictures.map(picture => 
+      picture.id === id ?
+      {...picture, liked: !picture.liked}
+      : picture
+    )
     setPictures(newPictures)
   }
 
